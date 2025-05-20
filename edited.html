@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(107, 243, 139, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 20px 10px rgba(107, 243, 139, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(107, 243, 139, 0);
+            }
+        }
+
+        body {
+            background-color: rgb(142, 183, 227);
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: rgb(217, 234, 247);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .form-title {
+            background-color: rgb(107, 243, 139);
+            color: rgb(0, 51, 0);
+            font-size: 35px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 8px;
+            border: 2px solid rgb(92, 74, 4);
+            color: rgb(1, 11, 4);
+        }
+
+        input[type="submit"] {
+            background-color: rgb(107, 243, 139);
+            color: rgb(0, 0, 0);
+            padding: 12px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(85, 200, 110);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-title">📝 REGISTRATION FORM 📝</div>
+        <form>
+            <div class="form-group">
+                <label for="name">👤 NAME:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">📧 E-MAIL:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">🔒 PASSWORD:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">🔒 CONFIRM PASSWORD:</label>
+                <input type="password" id="confirm_password" name="confirm_password">
+            </div>
+            <input type="submit" value="🚀 Submit">
+        </form>
+    </div>
+</body>
+<
